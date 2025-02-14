@@ -25,7 +25,7 @@ on:
 
 jobs:
   call-workflow:
-    uses: workflow-templates/ci-renovate/.github/workflows/ci-renovate.yaml@main
+    uses: workflow-templates/.github/workflows/ci-renovate.yaml@main
     with:
       logLevel: ${{ inputs.logLevel || 'info' }}
       overrideSchedule: ${{ github.event.inputs.overrideSchedule == 'true' && '{''schedule'':null}' || '' }}
