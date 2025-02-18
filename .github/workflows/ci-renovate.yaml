@@ -2,8 +2,8 @@
 # ci-renovate.yaml
 # Automates dependency updates using Renovate.
 ##
-
-name: Renovate
+---
+name: Call renovate bot
 
 on:
   workflow_dispatch:
@@ -25,8 +25,9 @@ on:
 
 jobs:
   call-workflow:
+    name: Renovate
     uses: sosadtsia/workflow-templates/.github/workflows/ci-renovate.yaml@main
+    secrets: inherit
     with:
       logLevel: ${{ inputs.logLevel || 'info' }}
       overrideSchedule: ${{ github.event.inputs.overrideSchedule == 'true' && '{''schedule'':null}' || '' }}
-    secrets: inherit
