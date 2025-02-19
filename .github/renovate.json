@@ -1,3 +1,3 @@
 {
-    "extends": ["github>sosadtsia/workflow-templates:renovate-config/renovate-config.json"]
+    "extends": ["github>sosadtsia/workflow-templates:renovate-config"]
 }
